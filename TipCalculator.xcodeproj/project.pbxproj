@@ -14,6 +14,7 @@
 		EE45C0F71E779905002E40C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE45C0F51E779905002E40C3 /* LaunchScreen.storyboard */; };
 		EE45C1021E779905002E40C3 /* TipCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45C1011E779905002E40C3 /* TipCalculatorTests.swift */; };
 		EE45C10D1E779905002E40C3 /* TipCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45C10C1E779905002E40C3 /* TipCalculatorUITests.swift */; };
+		EE45C11B1E77A212002E40C3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE45C11A1E77A212002E40C3 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		EE45C1081E779905002E40C3 /* TipCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE45C10C1E779905002E40C3 /* TipCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorUITests.swift; sourceTree = "<group>"; };
 		EE45C10E1E779905002E40C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE45C11A1E77A212002E40C3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				EE45C0EE1E779905002E40C3 /* ViewController.swift */,
 				EE45C0F01E779905002E40C3 /* Main.storyboard */,
 				EE45C0F31E779905002E40C3 /* Assets.xcassets */,
+				EE45C11A1E77A212002E40C3 /* SettingsViewController.swift */,
 				EE45C0F51E779905002E40C3 /* LaunchScreen.storyboard */,
 				EE45C0F81E779905002E40C3 /* Info.plist */,
 			);
@@ -261,6 +264,7 @@
 			files = (
 				EE45C0EF1E779905002E40C3 /* ViewController.swift in Sources */,
 				EE45C0ED1E779905002E40C3 /* AppDelegate.swift in Sources */,
+				EE45C11B1E77A212002E40C3 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +507,7 @@
 				EE45C1131E779905002E40C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE45C1141E779905002E40C3 /* Build configuration list for PBXNativeTarget "TipCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +516,7 @@
 				EE45C1161E779905002E40C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE45C1171E779905002E40C3 /* Build configuration list for PBXNativeTarget "TipCalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +525,7 @@
 				EE45C1191E779905002E40C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

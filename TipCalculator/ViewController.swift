@@ -14,9 +14,30 @@ class ViewController: UIViewController {
     @IBOutlet weak var TotalLabel: UILabel!
     @IBOutlet weak var TipLabel: UILabel!
     @IBOutlet weak var BillField: UITextField!
+    @IBOutlet weak var SplitNumber: UITextField!
+    @IBOutlet weak var IndLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let defaults = UserDefaults.standard
+        defaults.synchronize()
+        let tipPercentage = [0.18, 0.20, 0.25]
+        let bill = Double(BillField.text!) ?? 0
+        let tip = bill * tipPercentage[TipControl.selectedSegmentIndex]
+        let total = bill + tip
+        let split = Double(SplitNumber.text!) ?? 1
+        let ind = total/split
+        let c = defaults.string(forKey:"CurSign")!
+        
+        TipLabel.text = String(format:"\(c)%0.2f",tip)
+        TotalLabel.text = String(format:"\(c)%0.2f", total)
+        IndLabel.text = String(format:"\(c)%0.2f", ind)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,23 +50,51 @@ class ViewController: UIViewController {
     }
     
     @IBAction func CalculateTip(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.synchronize()
         let tipPercentage = [0.18, 0.20, 0.25]
         let bill = Double(BillField.text!) ?? 0
         let tip = bill * tipPercentage[TipControl.selectedSegmentIndex]
         let total = bill + tip
+        let split = Double(SplitNumber.text!) ?? 1
+        let ind = total/split
+        let c = defaults.string(forKey:"CurSign")!
         
-        TipLabel.text = String(format:"$%0.2f",tip)
-        TotalLabel.text = String(format:"$%0.2f", total)
+        TipLabel.text = String(format:"\(c)%0.2f",tip)
+        TotalLabel.text = String(format:"\(c)%0.2f", total)
+        IndLabel.text = String(format:"\(c)%0.2f", ind)
     }
     @IBAction func CalculateTipAgain(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.synchronize()
         let tipPercentage = [0.18, 0.20, 0.25]
         let bill = Double(BillField.text!) ?? 0
         let tip = bill * tipPercentage[TipControl.selectedSegmentIndex]
         let total = bill + tip
+        let split = Double(SplitNumber.text!) ?? 1
+        let ind = total/split
+        let c = defaults.string(forKey:"CurSign")!
         
-        TipLabel.text = String(format:"$%0.2f",tip)
-        TotalLabel.text = String(format:"$%0.2f", total)
+        TipLabel.text = String(format:"\(c)%0.2f",tip)
+        TotalLabel.text = String(format:"\(c)%0.2f", total)
+        IndLabel.text = String(format:"\(c)%0.2f", ind)
     }
 
+    @IBAction func CalculateSplit(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.synchronize()
+        let tipPercentage = [0.18, 0.20, 0.25]
+        let bill = Double(BillField.text!) ?? 0
+        let tip = bill * tipPercentage[TipControl.selectedSegmentIndex]
+        let total = bill + tip
+        let split = Double(SplitNumber.text!) ?? 1
+        let ind = total/split
+        let c = defaults.string(forKey:"CurSign")!
+        
+        TipLabel.text = String(format:"\(c)%0.2f",tip)
+        TotalLabel.text = String(format:"\(c)%0.2f", total)
+        IndLabel.text = String(format:"\(c)%0.2f", ind)
+    }
+    
 }
 
